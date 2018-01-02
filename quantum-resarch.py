@@ -40,7 +40,7 @@ plt.rcParams['figure.facecolor'] = 'white'
 
 ##################################IMPORTING DATA####################################
 "Varied N data"
-df = pd.read_excel('./research data notepad.xls',skiprows=6)
+df = pd.read_excel('./many_mock_data.xls',skiprows=6)
 data = df[['beta_omega','N','bare','<E>/Omg', 'stderr(E)/Omg']]
 Energy = df['<E>/Omg']
 beta_omega = df['beta_omega']
@@ -50,7 +50,7 @@ bare = df['bare']
 
 
 "N = 2 data"
-df2 = pd.read_excel('./research two body data.xls')
+df2 = pd.read_excel('./two_mock_data.xls')
 data2 = df2[['beta_omega','N','bare','<E>/Omg', 'stderr(E)/Omg']]
 Energy2 = df2['<E>/Omg']
 beta_omega2 = df2['beta_omega']
