@@ -1,7 +1,7 @@
 SYNOPSIS
 ========
 
-This script analyzes quantum Monte Carlo data to determine the ground-state equation of state of harmonically trapped many-fermion systems in two spatial dimensions. These are systems that are realized with ultracold atom experiments.
+This script parses and analyzes quantum Monte Carlo data to determine the ground-state wave equation of harmonically trapped many-fermion systems in two spatial dimensions. These are systems that are realized with ultracold atom experiments because this is where the resistivity of a system goes to zero.
 
 SETUP
 =====
@@ -13,12 +13,15 @@ Requirements
     * run this command in terminal to install the required python modules*
 
 
+# quantum_research
+
 MANY BODY
 ====
-Number of particles that were measured ranged from N = 2 to N = 20 skipping by 2. Each pair possessed a bare value of 0.2, 1, 2, 3, 4, or 6.
+The number of particles that were used to take measurements during this experiment ranged from N = 2 to N = 20, skipping by 2. Each pair possessed a bare value of 0.2, 1, 2, 3, 4, or 6.
 
-* The CSV was sorted such that data with the same N value was organized together
-* Each N data group was sorted by bare value
+The script does as follows:
+* The CSV containing the mechanical data, which is not included due to this being innovative research measurements, was sorted such that data measurements for the same number of fermions was grouped together
+* Each of these data groups was sorted by increasing bare value
 * The following nested for loop:
     `for key in sort.keys():`
         `data = sort[key]`
@@ -40,8 +43,10 @@ TWO BODY
 
 TWO BODY VS. MANY BODY
 ====
-* The plots generated used a fixed beta omega value of 2.5.
-* The energy for the many body case was divided by the N value to represent it as a two body case. 
-* Plots compared the energy for many body case represented as a two body case versus the energy two body case for a fixed beta omega value of 2.5 
+* The plots generated used a fixed beta_omega value of 2.5 because this is the beta_omega value where the particles can be approximated as non-interacting.
+* To represent the many-body case as a two-body case, the energy for the many body case was divided by the number of fermions in the many body case and doubled thereafter. 
+* Plots compared the energy for many body case represented as a two body case versus the energy two body case. All cases used a fixed beta omega value of 2.5 - again, because this is the beta_omega value where the particles can be approximated as non-interacting (a.k.a. the electron-electron repulsion is minimized).
 * The green arrows on the plot represent the ideal case
-# quantum_research
+
+The conclusions drawn from this study will be published in mid 2018. 
+
