@@ -1,3 +1,5 @@
+# quantum_research
+
 SYNOPSIS
 ========
 
@@ -11,9 +13,6 @@ Requirements
 * `pip3 install -r requirments.txt`
     
     * run this command in terminal to install the required python modules*
-
-
-# quantum_research
 
 MANY BODY
 ====
